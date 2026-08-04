@@ -1,0 +1,5 @@
+- id: smartprompt
+  name: SmartPrompt
+  entry: smartprompt --demo
+  language: python
+  pass_filenames: false
