@@ -25,12 +25,14 @@ smartprompt --demo        # run against the bundled demo
 | Where you work | How you run it |
 |---|---|
 | **Python** | `pip install smartprompt` |
+| **Go · Java · Node · PHP** | native ports in [`ports/`](ports/), each verified against the Python reference by [`ports/conformance/run.sh`](ports/conformance/run.sh) |
 | **CI / pre-commit** | add the hook from [`.pre-commit-hooks.yaml`](.pre-commit-hooks.yaml) |
 
 ## What's in this repo
 
 - **Core engine** — [`src/smartprompt/`](src/smartprompt/): lint() -> PromptScore. Deterministic, dependency-free.
 - **CLI** — `smartprompt --demo` (and `--version`): a deterministic demo of the core.
+- **Language ports** — [`ports/`](ports/): native Go, Java, Node, PHP implementations that reproduce the Python reference, with a shared conformance harness.
 - **Also included** — a runnable [`demo/`](demo/), [`examples/`](examples/), the IAIso mapping [`spec/iaiso-map.json`](spec/iaiso-map.json), a browser [`site/playground.html`](site/playground.html), plus public smoke tests in `tests/`.
 
 ## How it works

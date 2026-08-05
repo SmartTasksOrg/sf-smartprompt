@@ -1,0 +1,120 @@
+{
+  "results": [
+    {
+      "name": "empty",
+      "clarity": 46,
+      "defects": [
+        {
+          "rule": "PROMPT-ROLE",
+          "issue": "No role/persona set",
+          "fix": "Open with a role: 'You are a <expert> ...'."
+        },
+        {
+          "rule": "PROMPT-GOAL",
+          "issue": "Vague or missing goal",
+          "fix": "State one concrete verb+object."
+        },
+        {
+          "rule": "PROMPT-FORMAT",
+          "issue": "No output format",
+          "fix": "Name the output shape."
+        },
+        {
+          "rule": "PROMPT-CONSTRAINTS",
+          "issue": "No constraints",
+          "fix": "Add limits: length, tone, audience."
+        }
+      ]
+    },
+    {
+      "name": "role-only",
+      "clarity": 58,
+      "defects": [
+        {
+          "rule": "PROMPT-GOAL",
+          "issue": "Vague or missing goal",
+          "fix": "State one concrete verb+object."
+        },
+        {
+          "rule": "PROMPT-FORMAT",
+          "issue": "No output format",
+          "fix": "Name the output shape."
+        },
+        {
+          "rule": "PROMPT-CONSTRAINTS",
+          "issue": "No constraints",
+          "fix": "Add limits: length, tone, audience."
+        }
+      ]
+    },
+    {
+      "name": "role-and-goal",
+      "clarity": 78,
+      "defects": [
+        {
+          "rule": "PROMPT-FORMAT",
+          "issue": "No output format",
+          "fix": "Name the output shape."
+        },
+        {
+          "rule": "PROMPT-CONSTRAINTS",
+          "issue": "No constraints",
+          "fix": "Add limits: length, tone, audience."
+        }
+      ]
+    },
+    {
+      "name": "well-formed",
+      "clarity": 100,
+      "defects": []
+    },
+    {
+      "name": "goal-no-role",
+      "clarity": 66,
+      "defects": [
+        {
+          "rule": "PROMPT-ROLE",
+          "issue": "No role/persona set",
+          "fix": "Open with a role: 'You are a <expert> ...'."
+        },
+        {
+          "rule": "PROMPT-FORMAT",
+          "issue": "No output format",
+          "fix": "Name the output shape."
+        },
+        {
+          "rule": "PROMPT-CONSTRAINTS",
+          "issue": "No constraints",
+          "fix": "Add limits: length, tone, audience."
+        }
+      ]
+    },
+    {
+      "name": "pii-openai",
+      "clarity": 65,
+      "defects": [
+        {
+          "rule": "PROMPT-PII",
+          "issue": "Secret/PII in prompt",
+          "fix": "Remove the secret — see SmartPangolin."
+        }
+      ]
+    },
+    {
+      "name": "pii-aws",
+      "clarity": 65,
+      "defects": [
+        {
+          "rule": "PROMPT-PII",
+          "issue": "Secret/PII in prompt",
+          "fix": "Remove the secret — see SmartPangolin."
+        }
+      ]
+    },
+    {
+      "name": "format-list-word",
+      "clarity": 100,
+      "defects": []
+    }
+  ]
+}

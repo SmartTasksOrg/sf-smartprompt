@@ -1,0 +1,4 @@
+{ "name": "@smarttasks/smartprompt", "version": "3.0.0",
+  "description": "SmartPrompt — native Node port. Deterministic prompt linter. Zero deps.",
+  "license": "Apache-2.0", "bin": { "smartprompt": "bin/cli.js" }, "main": "lib/lint.js",
+  "scripts": { "test": "node test/conformance.test.js" } }

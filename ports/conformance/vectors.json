@@ -1,0 +1,13 @@
+{
+  "description": "Shared SmartPrompt conformance vectors. Every port must reproduce the Python reference (smartprompt.core.lint) for each case. Regenerate expected.json with gen_expected.py.",
+  "cases": [
+    { "name": "empty",            "text": "" },
+    { "name": "role-only",        "text": "You are a senior editor." },
+    { "name": "role-and-goal",    "text": "You are an analyst. Summarize the report." },
+    { "name": "well-formed",      "text": "You are an analyst. Summarize the report as a markdown table, under 200 words, neutral tone for an executive audience." },
+    { "name": "goal-no-role",     "text": "Write a comparison of the two options." },
+    { "name": "pii-openai",       "text": "You are a bot. Summarize this in json under 50 words. Key: sk-ABCDEFGHIJKL12345." },
+    { "name": "pii-aws",          "text": "Act as a reviewer and list issues in a table with a concise tone for a technical audience. AKIAABCDEFGH12345678" },
+    { "name": "format-list-word", "text": "You are a writer. Generate a bullet list. Keep each under 3 words." }
+  ]
+}
