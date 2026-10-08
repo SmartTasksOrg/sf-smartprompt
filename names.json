@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "repo": "SmartTasksOrg/smartprompt",
+  "checked_on": "2026-10-08",
+  "names": [
+    {
+      "registry": "pypi",
+      "name": "smartprompt",
+      "registered": false,
+      "workflow": "release.yml",
+      "note": "first release pending; README in state A"
+    },
+    {
+      "registry": "mcp",
+      "name": "io.github.smarttasksorg/smartprompt",
+      "registered": false
+    },
+    {
+      "registry": "npm",
+      "name": "@smarttasks/smartprompt",
+      "registered": false
+    },
+    {
+      "registry": "packagist",
+      "name": "smarttasks/smartprompt",
+      "registered": false
+    },
+    {
+      "registry": "go",
+      "name": "github.com/SmartTasksOrg/smartprompt/ports/go",
+      "registered": false
+    },
+    {
+      "registry": "npm",
+      "name": "smartprompt",
+      "registered": false,
+      "note": "owned by someone else on npm; never run or install this bare name"
+    }
+  ],
+  "third_party": {
+    "pypi": [
+      "pip",
+      "build",
+      "pytest"
+    ],
+    "npm": []
+  },
+  "local_images": [],
+  "git_owners": [
+    "SmartTasksOrg"
+  ],
+  "exclude_paths": []
+}
