@@ -1,4 +1,4 @@
-// SmartPrompt - native Go port. Reproduces smartprompt.core.lint exactly.
+// SmartPrompt - native Go port. Reproduces sf_smartprompt.core.lint exactly.
 // Standard library only (RE2 + encoding/json).
 package main
 

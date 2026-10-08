@@ -1,7 +1,7 @@
 'use strict';
 /*
  * SmartPrompt — native Node port.
- * Reproduces the Python reference (smartprompt.core.lint): same rule IDs, issue
+ * Reproduces the Python reference (sf_smartprompt.core.lint): same rule IDs, issue
  * and fix strings, ordering, weights, and clarity score. Zero dependencies.
  */
 const RULES = [

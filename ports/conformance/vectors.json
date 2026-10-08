@@ -1,5 +1,5 @@
 {
-  "description": "Shared SmartPrompt conformance vectors. Every port must reproduce the Python reference (smartprompt.core.lint) for each case. Regenerate expected.json with gen_expected.py.",
+  "description": "Shared SmartPrompt conformance vectors. Every port must reproduce the Python reference (sf_smartprompt.core.lint) for each case. Regenerate expected.json with gen_expected.py.",
   "cases": [
     { "name": "empty",            "text": "" },
     { "name": "role-only",        "text": "You are a senior editor." },
