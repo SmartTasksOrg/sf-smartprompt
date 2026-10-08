@@ -3,7 +3,7 @@ import java.util.*;
 import java.util.regex.*;
 
 /*
- * SmartPrompt - native Java port. Reproduces smartprompt.core.lint exactly
+ * SmartPrompt - native Java port. Reproduces sf_smartprompt.core.lint exactly
  * (rule IDs, issue/fix strings, ordering, weights, clarity score). JDK-only.
  *   javac SmartPrompt.java && java SmartPrompt [vectors.json]
  */

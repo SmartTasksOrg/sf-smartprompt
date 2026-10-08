@@ -1,5 +1,5 @@
 <?php
-/* SmartPrompt - native PHP port. Reproduces smartprompt.core.lint exactly. No deps. */
+/* SmartPrompt - native PHP port. Reproduces sf_smartprompt.core.lint exactly. No deps. */
 $RULES = [
   ['PROMPT-ROLE', 'No role/persona set', '/\b(you are|act as|role:)\b/i', false, "Open with a role: 'You are a <expert> ...'."],
   ['PROMPT-GOAL', 'Vague or missing goal', '/\b(write|summariz|analyz|list|compare|generate|fix|explain|classif)/i', false, 'State one concrete verb+object.'],

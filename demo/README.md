@@ -1,2 +1,2 @@
 # SmartPrompt demo
-Bundled sample data; `smartprompt --demo` uses built-ins.
+Bundled sample data; `sf-smartprompt --demo` uses built-ins.

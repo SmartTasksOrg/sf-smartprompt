@@ -3,23 +3,23 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "smartprompt"
+name = "sf-smartprompt"
 version = "3.0.0"
 description = "Lint before you send. Bad prompt in, bad work out — and it's your name on it."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "Apache-2.0" }
 authors = [{ name = "SmartTasks Lab" }]
-keywords = ["smart", "ai", "iaiso", "smartprompt", "devtools"]
+keywords = ["smart", "ai", "iaiso", "sf-smartprompt", "devtools"]
 dependencies = []
 
 [project.urls]
 Homepage = "https://smarttasks.cloud"
 Standard = "https://iaiso.org"
-Repository = "https://github.com/SmartTasksOrg/smartprompt"
+Repository = "https://github.com/SmartTasksOrg/sf-smartprompt"
 
 [project.scripts]
-smartprompt = "smartprompt.cli:main"
+sf-smartprompt = "sf_smartprompt.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

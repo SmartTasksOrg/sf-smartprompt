@@ -1,3 +1,3 @@
-module github.com/SmartTasksOrg/smartprompt/ports/go
+module github.com/SmartTasksOrg/sf-smartprompt/ports/go
 
 go 1.21
