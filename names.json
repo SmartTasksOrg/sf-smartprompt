@@ -1,33 +1,39 @@
 {
   "schema": 1,
-  "repo": "SmartTasksOrg/smartprompt",
+  "repo": "SmartTasksOrg/sf-smartprompt",
   "checked_on": "2026-10-08",
   "names": [
     {
       "registry": "pypi",
-      "name": "smartprompt",
+      "name": "sf-smartprompt",
       "registered": false,
       "workflow": "release.yml",
       "note": "first release pending; README in state A"
     },
     {
+      "registry": "pypi",
+      "name": "smartprompt",
+      "registered": false,
+      "note": "not used by the family: packages are published as sf-<name>; never install this name"
+    },
+    {
       "registry": "mcp",
-      "name": "io.github.smarttasksorg/smartprompt",
+      "name": "io.github.smarttasksorg/sf-smartprompt",
       "registered": false
     },
     {
       "registry": "npm",
-      "name": "@smarttasks/smartprompt",
+      "name": "sf-smartprompt",
       "registered": false
     },
     {
       "registry": "packagist",
-      "name": "smarttasks/smartprompt",
+      "name": "smarttasksorg/sf-smartprompt",
       "registered": false
     },
     {
       "registry": "go",
-      "name": "github.com/SmartTasksOrg/smartprompt/ports/go",
+      "name": "github.com/SmartTasksOrg/sf-smartprompt/ports/go",
       "registered": false
     },
     {
