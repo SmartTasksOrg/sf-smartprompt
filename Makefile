@@ -1,5 +1,5 @@
 test:
-	python tests/test_smartprompt.py
+	python -m pytest -q
 demo:
 	python -m sf_smartprompt --demo
 build:
