@@ -1,4 +1,4 @@
-"""SmartPrompt CLI — run `smartprompt --demo`."""
+"""SmartPrompt CLI — run `sf-smartprompt --demo`."""
 import os, sys, json
 from . import core
 from ._version import __version__

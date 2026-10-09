@@ -1,4 +1,4 @@
-from smartprompt import cli
+from sf_smartprompt import cli
 
 def test_demo_runs():
     assert cli.main(["--demo"]) == 0

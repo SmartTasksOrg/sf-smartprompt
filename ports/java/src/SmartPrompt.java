@@ -3,7 +3,7 @@ import java.util.*;
 import java.util.regex.*;
 
 /*
- * SmartPrompt - native Java port. Reproduces smartprompt.core.lint exactly
+ * SmartPrompt - native Java port. Reproduces sf_smartprompt.core.lint exactly
  * (rule IDs, issue/fix strings, ordering, weights, clarity score). JDK-only.
  *   javac SmartPrompt.java && java SmartPrompt [vectors.json]
  */
@@ -72,6 +72,9 @@ public class SmartPrompt {
     }
 
     public static void main(String[] args) throws Exception {
+        // Always write UTF-8 (the output contains non-ASCII text such as an em dash);
+        // without this the JVM uses the console code page and prints "?" on Windows.
+        System.setOut(new java.io.PrintStream(new java.io.FileOutputStream(java.io.FileDescriptor.out), true, "UTF-8"));
         if (args.length >= 1 && args[0].equals("--text")) {
             System.out.println(scoreJson(null, lint(args.length >= 2 ? args[1] : "")));
             return;
