@@ -1,4 +1,26 @@
-{ "name": "@smarttasks/smartprompt", "version": "3.0.0",
+{
+  "name": "sf-smartprompt",
+  "version": "3.0.0",
   "description": "SmartPrompt — native Node port. Deterministic prompt linter. Zero deps.",
-  "license": "Apache-2.0", "bin": { "smartprompt": "bin/cli.js" }, "main": "lib/lint.js",
-  "scripts": { "test": "node test/conformance.test.js" } }
+  "license": "Apache-2.0",
+  "bin": {
+    "sf-smartprompt": "bin/cli.js"
+  },
+  "main": "lib/lint.js",
+  "scripts": {
+    "test": "node test/conformance.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SmartTasksOrg/sf-smartprompt.git",
+    "directory": "ports/node"
+  },
+  "files": [
+    "bin/",
+    "lib/"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

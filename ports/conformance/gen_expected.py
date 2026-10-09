@@ -3,7 +3,7 @@
 import json, os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.abspath(os.path.join(HERE, "..", "..", "src")))
-from smartprompt.core import lint  # noqa: E402
+from sf_smartprompt.core import lint  # noqa: E402
 
 def to_dict(name, s):
     return {"name": name, "clarity": s.clarity,

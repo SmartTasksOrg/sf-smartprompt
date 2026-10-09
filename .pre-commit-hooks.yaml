@@ -1,5 +1,5 @@
-- id: smartprompt
+- id: sf-smartprompt
   name: SmartPrompt
-  entry: smartprompt --demo
+  entry: sf-smartprompt --demo
   language: python
   pass_filenames: false

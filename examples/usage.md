@@ -1,7 +1,7 @@
 # Using SmartPrompt
 
 ```bash
-smartprompt --demo
+sf-smartprompt --demo
 ```
 
 <!-- SMARTTASKS-MODELS:START -->
