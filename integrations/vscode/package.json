@@ -1,0 +1,37 @@
+{
+  "name": "smartprompt-vscode",
+  "displayName": "SmartPrompt (IAIso)",
+  "version": "3.0.0",
+  "description": "Lint a prompt for missing role, goal, output format, constraints, and leaked secrets.",
+  "publisher": "smarttasks",
+  "license": "Apache-2.0",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Linters",
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:smartprompt.run"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "smartprompt.run",
+        "title": "SmartPrompt: Run on current file/workspace"
+      }
+    ],
+    "configuration": {
+      "title": "SmartPrompt",
+      "properties": {
+        "smartprompt.python": {
+          "type": "string",
+          "default": "python3",
+          "description": "Python interpreter"
+        }
+      }
+    }
+  }
+}
