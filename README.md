@@ -46,9 +46,10 @@ sf-smartprompt --demo
 
 ## Status
 
-- **Version 3.0.0, experimental.** A small deterministic command-line tool with a bundled synthetic demo and two smoke tests.
+- **Version 3.0.0, experimental (alpha).** A small deterministic command-line tool with a bundled synthetic demo. The version number does not mean the tool is mature: PyPI classifies it as "Development Status :: 3 - Alpha".
+- **Scope:** `lint()` applies five regular-expression rules (role, goal, output format, constraints, secrets). It does not judge a prompt beyond them.
 - **Published:** PyPI `sf-smartprompt` (see Install). Nothing else is published.
-- **Tested:** the 2 smoke tests in `tests/` on Python 3.12, Linux, on every push to master and every pull request (`.github/workflows/ci.yml`).
+- **Tested:** the 7 tests in `tests/` (2 smoke tests of the demo and 5 behaviour tests of `core`, in `tests/test_behaviour.py`) on Python 3.12, Linux, on every push to master and every pull request (`.github/workflows/ci.yml`).
 - **Not tested:** Windows and macOS; Python versions other than 3.12.
 - **Ports:** Go, Java, Node and PHP ports in `ports/` are checked against the Python reference by `ports/conformance/run.sh` (run by hand, not in CI); they are not published on any registry.
 - **Security review:** none independent. Report vulnerabilities as described in [SECURITY.md](SECURITY.md).
