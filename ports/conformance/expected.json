@@ -95,8 +95,8 @@
       "defects": [
         {
           "rule": "PROMPT-PII",
-          "issue": "Secret/PII in prompt",
-          "fix": "Remove the secret — see SmartPangolin."
+          "issue": "Secret/PII in prompt: OpenAI key",
+          "fix": "Remove the secret or personal data — see SmartPangolin."
         }
       ]
     },
@@ -106,8 +106,8 @@
       "defects": [
         {
           "rule": "PROMPT-PII",
-          "issue": "Secret/PII in prompt",
-          "fix": "Remove the secret — see SmartPangolin."
+          "issue": "Secret/PII in prompt: AWS access key",
+          "fix": "Remove the secret or personal data — see SmartPangolin."
         }
       ]
     },

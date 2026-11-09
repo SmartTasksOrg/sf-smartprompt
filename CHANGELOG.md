@@ -2,6 +2,15 @@
 
 ## Unreleased
 
+### Added
+- Secret and personal-data detection widened from 2 key formats to 16 kinds (`find_secrets()`); the PROMPT-PII issue names what was found.
+- `lint(text, framework="broke")`: PROMPT-BACKGROUND and PROMPT-EXAMPLES checks.
+- Wider goal and constraint vocabularies.
+- CLI: `sf-smartprompt PROMPT [--framework basic|broke] [--min 70] [--json]`; exit code 1 below the minimum or on any leak.
+
+### Tests
+- `tests/test_behaviour.py` now has 18 behaviour tests covering real input, validation and the CLI.
+
 ### Tests
 - `tests/test_behaviour.py`: 5 behaviour tests of `core` (every rule or formula, edge cases and the fallbacks), next to the 2 smoke tests of the demo.
 

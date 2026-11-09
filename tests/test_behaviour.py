@@ -34,3 +34,50 @@ def test_the_worst_prompt_never_goes_below_zero_and_every_defect_has_a_fix():
     s = core.lint("hello sk-abcdefghijklmnop")
     assert s.clarity == 100 - sum(core.WEIGHT.values()) >= 0
     assert all(d.fix for d in s.defects)
+
+
+import pytest
+
+
+@pytest.mark.parametrize("leak,kind", [
+    ("sk-ant-api03-abcdefghijklmnop", "Anthropic key"),
+    ("ghp_" + "a" * 36, "GitHub token"),
+    ("AIza" + "b" * 35, "Google API key"),
+    ("-----BEGIN PRIVATE KEY-----", "private key"),
+    ("password: hunter22", "password"),
+    ("postgres://app:s3cret@db:5432/x", "connection string"),
+    ("alice@example.com", "email address"),
+    ("13800138000", "China mobile number"),
+    ("11010519491231002X", "China resident ID"),
+    ("4111 1111 1111 1111", "payment card"),
+])
+def test_secrets_and_personal_data_are_found(leak, kind):
+    s = core.lint(GOOD + " " + leak)
+    assert [d.rule for d in s.defects] == ["PROMPT-PII"]
+    assert kind in s.defects[0].issue and s.clarity == 65
+
+
+def test_numbers_that_fail_the_card_checksum_are_not_cards():
+    assert "payment card" not in core.find_secrets("order 1234 5678 9012 3456")
+
+
+def test_broke_adds_background_and_examples():
+    s = core.lint(GOOD, framework="broke")
+    assert [d.rule for d in s.defects] == ["PROMPT-BACKGROUND", "PROMPT-EXAMPLES"]
+    assert s.clarity == 100 - 8 - 6
+    full = ("We are a sports-drink brand planning a summer campaign. You are a creative director. "
+            "Write 5 posts as a markdown table, under 200 words each. Example: 'Beat the heat...'")
+    assert core.lint(full, framework="broke").clarity == 100
+    with pytest.raises(ValueError):
+        core.lint(GOOD, framework="other")
+
+
+def test_cli_lints_a_file_and_sets_the_exit_code(tmp_path, capsys):
+    from sf_smartprompt import cli
+    f = tmp_path / "prompt.txt"
+    f.write_text(GOOD)
+    assert cli.main([str(f)]) == 0
+    assert cli.main([str(f), "--framework", "broke", "--min", "90"]) == 1
+    f.write_text(GOOD + " key sk-abcdefghijklmnop")
+    assert cli.main([str(f), "--min", "0", "--json"]) == 1      # a leak always fails
+    assert "PROMPT-PII" in capsys.readouterr().out
