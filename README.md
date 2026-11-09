@@ -47,9 +47,9 @@ sf-smartprompt --demo
 ## Status
 
 - **Version 3.0.0, experimental (alpha).** A small deterministic command-line tool with a bundled synthetic demo. The version number does not mean the tool is mature: PyPI classifies it as "Development Status :: 3 - Alpha".
-- **Scope:** `lint()` applies five regular-expression rules (role, goal, output format, constraints, secrets). It does not judge a prompt beyond them.
+- **Scope:** `lint()` applies regular-expression rules for role, goal, output format and constraints, and blocks 16 kinds of secret and personal data (API keys, private keys, JWTs, passwords, connection strings, emails, China mobile and resident ID numbers, US SSNs, Luhn-checked card numbers). `framework="broke"` adds background and examples checks. It does not judge a prompt beyond these rules. Run it on your own prompt: `sf-smartprompt prompt.txt --framework broke`.
 - **Published:** PyPI `sf-smartprompt` (see Install). Nothing else is published.
-- **Tested:** the 7 tests in `tests/` (2 smoke tests of the demo and 5 behaviour tests of `core`, in `tests/test_behaviour.py`) on Python 3.12, Linux, on every push to master and every pull request (`.github/workflows/ci.yml`).
+- **Tested:** the 20 tests in `tests/` (2 smoke tests of the demo and 18 behaviour tests of `core`, in `tests/test_behaviour.py`) on Python 3.12, Linux, on every push to master and every pull request (`.github/workflows/ci.yml`).
 - **Not tested:** Windows and macOS; Python versions other than 3.12.
 - **Ports:** Go, Java, Node and PHP ports in `ports/` are checked against the Python reference by `ports/conformance/run.sh` (run by hand, not in CI); they are not published on any registry.
 - **Security review:** none independent. Report vulnerabilities as described in [SECURITY.md](SECURITY.md).
